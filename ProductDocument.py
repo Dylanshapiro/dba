@@ -24,7 +24,7 @@ class Product:
             self.products_sale_flag = products_sale_flag
 
     def documentToProduct(self,product):
-        return Product(_id=product['_id'],products_name=product['products_name'],products_price=product['products_price'], products_stock=product['products_stock'],products_description=product['products_description'],products_restock_level=product['products_restock_level'], products_category= product['products_category'], products_sale_flag=product['products_sale_flag'])
+        return Product(**product)
 
     def printObj(self):
         print("BeginObject:~~~~~~~~~~~~~~")
